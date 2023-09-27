@@ -1,0 +1,52 @@
+<div class="container">
+  <form (ngSubmit)="onSubmit()">
+    <label for="postId">Enter Post ID:</label>
+    <input type="number" id="postId" name="postId" [(ngModel)]="postId">
+    <button type="submit">Get Post Details</button>
+  </form>
+</div>
+
+<div *ngIf="post" class="post-details">
+  <table>
+    <tr>
+      <th>Post ID:</th>
+      <td>{{ post.id }}</td>
+    </tr>
+    <tr>
+      <th>Content:</th>
+      <td>{{ post.content }}</td>
+    </tr>
+    <tr>
+      <th>Created At:</th>
+      <td>{{ post.timestamp }}</td>
+    </tr>
+   
+    <tr *ngFor="let comment of comments">
+      <th>Comment:</th>
+      <td>{{ comment.content }}</td>
+    </tr>
+   
+     <tr>
+      <th>Likes:</th>
+      <td>{{ post.likes }}</td>
+    </tr>
+  </table>
+</div>
+
+
+<div *ngIf="!post" class="error">
+  <p>Post not found.</p>
+</div>
+
+<div *ngIf="comments.length === 0" class="no-comments">
+  <p>No comments available for this post.</p>
+</div>
+<div class="container">
+  <form (ngSubmit)="onSubmitComment()">
+    <label for="commenterName">Your User ID:</label>
+    <input type="text" id="commenterName" name="commenterName" [(ngModel)]="commenterName">
+    <label for="commentContent">Comment Content:</label>
+    <textarea id="commentContent" name="commentContent" [(ngModel)]="commentContent"></textarea>
+    <button type="submit">Add Comment</button>
+  </form>
+</div>

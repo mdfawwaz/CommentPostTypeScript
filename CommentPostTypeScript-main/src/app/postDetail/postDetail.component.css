@@ -1,0 +1,101 @@
+/* CSS for table-based display */
+
+/* Container styling */
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px;
+  width: 50%; /* Adjust the width as needed */
+  margin: 0 auto; 
+  padding: 20px;
+  border: 1px solid #007bff; /* Blue border */
+  border-radius: 10px;
+  background-color: #f0f0f0; /* Light gray background */
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2); /* Box shadow for depth */
+}
+
+/* Form styling */
+form {
+  text-align: center;
+}
+
+label {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: bold;
+  color: #007bff; /* Blue color for label */
+}
+
+input[type="number"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #007bff; /* Blue border */
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-size: 16px; /* Larger font size for better readability */
+}
+
+button[type="submit"] {
+  background-color: #007bff; /* Blue button */
+  font-family: 'Times New Roman', Times, serif;
+  color: white;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 15px; /* Larger font size for emphasis */
+}
+
+/* Post container styling */
+.post-details {
+  margin: 20px;
+  padding: 20px;
+  border: 1px solid #007bff; /* Blue border */
+  border-radius: 10px;
+  background-color: #f5f5f5; /* Light gray background */
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2); /* Box shadow for depth */
+}
+
+/* Table styling */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+th {
+  background-color: #007bff; /* Blue header background */
+  color: white; /* White text color */
+  font-weight: bold;
+  padding: 8px;
+  text-align: left;
+}
+
+td {
+  border: 1px solid #ccc;
+  padding: 8px;
+  text-align: left;
+}
+
+/* Error and no-comments styling */
+.error, .no-comments {
+  text-align: center;
+  margin: 20px auto;
+  font-weight: bold;
+}
+
+.error p, .no-comments p {
+  color: #ff0000; /* Red color for error messages */
+}
+.center-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh; /* Adjust this for the desired height */
+  text-align: center;
+  margin-top: 20px; /* Add any desired margin */
+}

@@ -1,0 +1,9 @@
+<div class="comment-section">
+    <div *ngFor="let comment of comments">
+      <p>{{ comment.content }}</p>
+      <p>Likes: {{ comment.likes }}</p>
+      <!-- Display tagged users -->
+      <p *ngIf="comment.taggedUsers.length > 0">Tagged: <span *ngFor="let user of comment.taggedUsers">@{{ user.username }}</span></p>
+    </div>
+  </div>
+  
